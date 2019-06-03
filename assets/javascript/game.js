@@ -30,8 +30,10 @@ function gameReset(){
     guessedLetters = [];
     guessingWord = [];
     for(var i = 0; i < randomWordArr[wordSelector].length; i++) {
-         guessingWord.push(" _ ");
-    }
+        if(randomWordArr[wordSelector][i] === " "){
+        guessingWord.push("\xa0\xa0");
+    } else {  guessingWord.push(" _ ")}
+}
     console.log(remainingGuesses);
     console.log(wordSelector);
     console.log(guessingWord);
