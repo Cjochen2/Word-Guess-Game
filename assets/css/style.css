@@ -2,3 +2,14 @@ body{
 background: url(../images/90s\ Background1.jpg) no-repeat;
 background-size: cover;
 }
+#pressKeyTryAgain, 
+#gameover-image, 
+#youwin-image { display: none;}
+
+#gameover-image, #youwin-image{ 
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+}
+

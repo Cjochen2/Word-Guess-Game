@@ -1,5 +1,5 @@
 // word bank
-var randomWordArr = ["real world", "kryptonite", "good", "drops of jupiter",];
+var randomWordArr = ["real world", "kryptonite", "good", "drops of jupiter","jeremy","the pretender","best of you", "beverly hills", "i miss you","glycerine", "round here", "wonderful","the freshman","one last breath","santa monica"];
 
 // Max number of tries
 const attempts = 10;
@@ -37,6 +37,9 @@ function gameReset(){
     console.log(remainingGuesses);
     console.log(wordSelector);
     console.log(guessingWord);
+    document.getElementById("pressKeyTryAgain").style.cssText= "display: none";
+    document.getElementById("gameover-image").style.cssText = "display: none";
+    document.getElementById("youwin-image").style.cssText = "display: none";
     updateDisplay();
    
 }
@@ -51,6 +54,8 @@ function updateDisplay() {
     document.getElementById("remainingGuesses").innerText = remainingGuesses;
     document.getElementById("guessedLetters").innerText = guessedLetters;
     if(remainingGuesses <= 0) {
+        document.getElementById("gameover-image").style.cssText = "display: block";
+        document.getElementById("pressKeyTryAgain").style.cssText = "display:block";
         hasFinished = true;
     }
 };
@@ -101,6 +106,8 @@ function evaluateGuess(letter) {
 
 function checkWin() {
     if(guessingWord.indexOf(" _ ") === -1) {
+        document.getElementById("youwin-image").style.cssText = "display: block";
+        document.getElementById("pressKeyTryAgain").style.cssText= "display: block";
         wins++;
         hasFinished = true;
     }
