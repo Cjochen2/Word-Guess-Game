@@ -1,6 +1,6 @@
 body{
-background: url(../images/90s\ Background1.jpg) no-repeat;
-background-size: cover;
+background: url(../images/90s\ Background.jpg) no-repeat;
+background-size: 100%;
 }
 #pressKeyTryAgain, 
 #gameover-image, 

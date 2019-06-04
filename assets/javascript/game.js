@@ -22,6 +22,9 @@ var hasFinished = false;
 // How many wins
 var wins = 0;
 
+var winSound = document.getElementById("winSound")
+var loseSound = document.getElementById("loseSound")
+
 gameReset();
 
 function gameReset(){
@@ -56,6 +59,7 @@ function updateDisplay() {
     if(remainingGuesses <= 0) {
         document.getElementById("gameover-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText = "display:block";
+        //loseSound.play();
         hasFinished = true;
     }
 };
@@ -108,8 +112,14 @@ function checkWin() {
     if(guessingWord.indexOf(" _ ") === -1) {
         document.getElementById("youwin-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText= "display: block";
+        //winSound.play();
         wins++;
         hasFinished = true;
     }
 };
 
+function playHint(){
+    // Need to figure out how to get it to pick the correct song on the help button.
+    //../assets/mp3s/song + wordSelector" .play();
+
+}
