@@ -1,6 +1,9 @@
 // word bank
 var randomWordArr = ["real world", "kryptonite", "good", "drops of jupiter","jeremy","the pretender","best of you", "beverly hills", "i miss you","glycerine", "round here", "wonderful","the freshman","one last breath","santa monica"];
 
+// This will potentially be the array that holds the mp3 files to call on when a button is clicked
+var songHints = [];
+
 // Max number of tries
 const attempts = 10;
 
@@ -119,7 +122,8 @@ function checkWin() {
 };
 
 function playHint(){
-    // Need to figure out how to get it to pick the correct song on the help button.
+    // Need to figure out how to get it to pick the correct song on the help button. Two different ideas below
+    // songHints[wordSelector].play
     //../assets/mp3s/song + wordSelector" .play();
 
 }

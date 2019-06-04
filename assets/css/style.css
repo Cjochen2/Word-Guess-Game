@@ -1,7 +1,12 @@
 body{
-background: url(../images/90s\ Background.jpg) no-repeat;
+
+background-color: black;
+/*background: url(../images/90s\ Background.jpg) no-repeat;
 background-size: 100%;
-}
+*/}
+
+
+
 #pressKeyTryAgain, 
 #gameover-image, 
 #youwin-image { display: none;}
@@ -11,5 +16,18 @@ background-size: 100%;
     margin: 0 auto;
     width: 300px;
     height: 300px;
+}
+
+.jumbotron {
+    margin-left: 10%;
+    width: 80%;
+    background-color: black;
+    color: white;
+}
+
+button {
+    background-color: red;
+    color: black;
+    border: none;
 }
 
